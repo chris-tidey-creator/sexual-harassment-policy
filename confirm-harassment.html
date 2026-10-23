@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sexual Harassment Policy Confirmation | Operam Education Group</title>
+<style>
+  :root {
+    --paper: #F4F6F7;
+    --ink: #1C2430;
+    --ink-soft: #5A6572;
+    --line: #DCE3E7;
+    --teal: #1D6E56;
+    --teal-dark: #0C2C4C;
+    --amber: #1D6E56;
+    --card: #FFFFFF;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    padding: 32px 16px 64px;
+  }
+
+  .wrap {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+    margin-bottom: 28px;
+  }
+
+  .masthead .org {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--teal-dark);
+  }
+
+  .masthead .year {
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin: 0 0 8px;
+    color: var(--teal-dark);
+  }
+
+  .intro {
+    color: var(--ink-soft);
+    margin: 0 0 28px;
+  }
+
+  .doc-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+
+  .doc-link a {
+    color: var(--teal-dark);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--teal-dark);
+  }
+
+  .doc-link span {
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+
+  .confirm-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+    background: #EAF4F1;
+    border: 1px solid #BFDED3;
+    border-radius: 4px;
+    margin-bottom: 24px;
+  }
+
+  .confirm-row input {
+    margin-top: 4px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--amber);
+  }
+
+  .confirm-row label {
+    font-size: 0.95rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 14px;
+    background: var(--teal-dark);
+    color: #F6F4EF;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  button:disabled {
+    background: #B7C4C3;
+    cursor: not-allowed;
+  }
+
+  .note {
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    margin-top: 14px;
+    text-align: center;
+  }
+
+  .state {
+    display: none;
+    text-align: center;
+    padding: 48px 20px;
+  }
+
+  .state.active {
+    display: block;
+  }
+
+  .state h2 {
+    font-family: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    color: var(--teal-dark);
+    margin-bottom: 8px;
+  }
+
+  .error-text {
+    color: #A3402C;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    text-align: center;
+    display: none;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <img src="https://6482496e.delivery.rocketcdn.me/wp-content/uploads/2022/01/cropped-fav-300x300.png" alt="Operam Education Group" style="width:30px;height:30px;border-radius:6px;">
+      <span class="org">Operam Education Group</span>
+    </div>
+    <span class="year">Policy confirmation</span>
+  </div>
+
+  <div id="formState">
+    <h1 id="greeting">Confirm you've read the Sexual Harassment Policy</h1>
+    <p class="intro">Operam Education Group expects everyone it works with to be treated with dignity and respect, and to treat others the same way. Please read the Sexual Harassment Policy carefully, then confirm below that you have read and understood it. This takes under a minute.</p>
+
+    <div class="doc-link">
+      <div>
+        <div><a href="https://sexualharassmentpolicy.operameducationgroup.com/OEG_Sexual_Harassment_Policy_October_2026.pdf" target="_blank" rel="noopener">Open the Sexual Harassment Policy</a></div>
+        <span>Opens in a new tab</span>
+      </div>
+    </div>
+
+    <form id="policyForm">
+      <div class="confirm-row">
+        <input type="checkbox" id="ackBox" required>
+        <label for="ackBox">I confirm I have read and understood the Operam Education Group Sexual Harassment Policy.</label>
+      </div>
+
+      <button type="submit" id="submitBtn">Confirm</button>
+      <p class="error-text" id="errorText">Something went wrong sending your confirmation. Please try again, or contact your consultant if this keeps happening.</p>
+      <p class="note">Your confirmation is recorded with the date and time.</p>
+    </form>
+  </div>
+
+  <div class="state" id="successState">
+    <h2>Thanks, you're all set</h2>
+    <p class="intro" style="margin: 0 auto;">Your confirmation has been recorded. You can close this page.</p>
+  </div>
+
+  <div class="state" id="invalidState">
+    <h2>This link isn't valid</h2>
+    <p class="intro" style="margin: 0 auto;">Please use the link from the original email, or contact your consultant for a new one.</p>
+  </div>
+
+</div>
+
+<script>
+  const SUBMIT_ENDPOINT = "https://script.google.com/macros/s/AKfycbzfLF1frNFjn1y8vPZBnV2ONBjHxvB8QP9W68jB-TRzaQjO8S2y_JrD4r_eYXdn3chjUA/exec";
+
+  // Must match an entry in ALLOWED_POLICIES in apps_script.gs exactly.
+  // Responses are logged to a tab with this name.
+  const POLICY_NAME = "Sexual Harassment Policy";
+
+  const params = new URLSearchParams(window.location.search);
+  const candidateId = params.get("id");
+  const name = params.get("n");
+  const token = params.get("t");
+
+  const formState = document.getElementById("formState");
+  const invalidState = document.getElementById("invalidState");
+  const successState = document.getElementById("successState");
+  const greeting = document.getElementById("greeting");
+  const errorText = document.getElementById("errorText");
+
+  if (!candidateId || !name || !token) {
+    formState.style.display = "none";
+    invalidState.classList.add("active");
+  } else {
+    greeting.textContent = `Hi ${decodeURIComponent(name)}, please confirm you've read the Sexual Harassment Policy`;
+  }
+
+  const form = document.getElementById("policyForm");
+  const submitBtn = document.getElementById("submitBtn");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    errorText.style.display = "none";
+
+    const payload = {
+      policy: POLICY_NAME,
+      candidateId: candidateId,
+      name: decodeURIComponent(name),
+      token: token,
+      confirmedAt: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    };
+
+    try {
+      // mode: "no-cors" because Google's script service redirects on
+      // response, and browsers sometimes block reading that redirected
+      // response even though the write itself has already completed.
+      // We can't read a status back in this mode, so a request that
+      // doesn't throw is treated as success.
+      await fetch(SUBMIT_ENDPOINT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload)
+      });
+      formState.style.display = "none";
+      successState.classList.add("active");
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Confirm";
+      errorText.style.display = "block";
+    }
+  });
+</script>
+</body>
+</html>
